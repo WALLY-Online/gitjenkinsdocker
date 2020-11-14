@@ -1,6 +1,6 @@
 pipeline{
 
-    ageny any
+    agent any
 
     tools{
         maven 'm3'
@@ -44,7 +44,7 @@ pipeline{
                 sh 'java -jar app/app.jar'
             }
         }
-        stage('Test'){
+        stage('Test2'){
             steps{
                 sh 'curl http://localhost'
             }
@@ -55,7 +55,4 @@ pipeline{
     }
 
 }
-
-
-
 
