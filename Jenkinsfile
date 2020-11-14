@@ -40,20 +40,19 @@ pipeline{
         }
         stage('Launch Container'){
             steps{
-                sh 'docker run -itd -p9090:9090 wrimage:1.0'
+                sh 'docker run -itd -P wrimage:1.0'
                 sh 'java -jar app.jar'
             }
         }
-        stage('Test2'){
-            steps{
-                sh 'curl http://localhost:9090'
-            }
-        }
+        // stage('Test2'){
+        //     steps{
+        //         sh 'curl http://localhost:9090'
+        //     }
+        // }
 
 
 
     }
 
 }
-
 
