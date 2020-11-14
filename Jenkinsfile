@@ -35,12 +35,12 @@ pipeline{
         }
         stage('Build Image'){
             steps{
-                sh 'sudo docker build -t wrimage:1.0 .'
+                sh 'docker build -t wrimage:1.0 .'
             }
         }
         stage('Launch Container'){
             steps{
-                sh 'sudo docker run -itd -p80:80 wrimage:1.0'
+                sh 'docker run -itd -p80:80 wrimage:1.0'
                 sh 'java -jar app/app.jar'
             }
         }
