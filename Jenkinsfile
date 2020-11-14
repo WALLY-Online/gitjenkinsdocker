@@ -41,7 +41,7 @@ pipeline{
         stage('Launch Container'){
             steps{
                 sh 'docker run -itd -P wrimage:1.0'
-                sh 'java -jar app.jar'
+                sh 'java -jar /app/app.jar'
             }
         }
         // stage('Test2'){
