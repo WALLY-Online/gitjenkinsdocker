@@ -1,6 +1,6 @@
 pipeline{
 
-    ageny any
+    agent any
 
     tools{
         maven 'm3'
